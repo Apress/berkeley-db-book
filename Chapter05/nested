@@ -1,0 +1,24 @@
+
+DbTxn *parent;
+try
+{
+    env->txn_begin(NULL, &parent, 0);
+    db->get(parent, &key, &value, 0);
+
+    DbTxn *child;
+    try
+    {
+        env->txn_begin(parent, &child, 0);
+        db->put(child, &key, &value1, 0);
+        child->commit(0);
+    }
+    catch (DbException ex)
+    {
+        child->abort();
+    }
+    parent->commit(0);
+}
+catch (DbException& ex)
+{
+    parent->abort();
+}

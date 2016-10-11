@@ -1,0 +1,2 @@
+rm -f ./chap5_env/*
+touch chap5_cds

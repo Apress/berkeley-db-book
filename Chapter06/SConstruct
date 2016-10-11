@@ -1,0 +1,29 @@
+
+MYLIBPATH = ['/home/hy/sw/install/lib',
+             '/usr/lib']
+MYCPPPATH = ['/home/hy/sw/install/include']
+USED_LIBS = ['db_cxx',
+             'pthread',
+             'ACE',]
+
+SOURCES_FILES = ['cds.cc']
+SOURCES_FILES_1 = ['tds.cc', 'load_db.cc']
+SOURCES_FILES_2 = ['misc.cc']
+
+Program( 'cds', 
+          SOURCES_FILES, 
+          LIBS = USED_LIBS, 
+          CPPPATH = MYCPPPATH,
+          LIBPATH = MYLIBPATH )
+
+Program( 'tds', 
+          SOURCES_FILES_1, 
+          LIBS = USED_LIBS, 
+          CPPPATH = MYCPPPATH,
+          LIBPATH = MYLIBPATH )
+
+Program( 'misc', 
+          SOURCES_FILES_2, 
+          LIBS = USED_LIBS, 
+          CPPPATH = MYCPPPATH,
+          LIBPATH = MYLIBPATH )

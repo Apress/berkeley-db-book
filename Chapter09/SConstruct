@@ -1,0 +1,20 @@
+
+MYLIBPATH = ['/home/hy/sw/install/lib',
+             '/usr/lib']
+
+MYCPPPATH = ['/home/hy/sw/install/include',
+             '/home/hy/sw/install/include/boost-1_33',
+            ]
+
+USED_LIBS = ['db_cxx',
+             'pthread',
+             'ACE',]
+
+SOURCES_FILES_1 = ['tds.cc', 'dbentry.cc', 'gtm.cc']
+
+
+Program( 'gtm', 
+          SOURCES_FILES_1, 
+          LIBS = USED_LIBS, 
+          CPPPATH = MYCPPPATH,
+          LIBPATH = MYLIBPATH )

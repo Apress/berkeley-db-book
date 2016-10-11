@@ -1,0 +1,46 @@
+Dear Reader,
+
+This repository contains the source code of the code examples
+used in the book "The Berkeley DB Book". The code for a particular 
+chapter appears in the directory named after the chapter.
+
+Some open source tools/libraries have been used in the code examples.
+These tools/libraries were used to make the code portable across 
+various UNIX and WINDOWS environments.
+
+
+Packages used in the code examples:
+
+   Listed below are the open source packages/tools used in the code examples. 
+
+    a) SConstruct 
+       - used for compiling the code
+       - available at - http://www.scons.prg
+ 
+    b) Adaptive Communication Environment (ACE) 
+       - provides a portable threading and communication library
+       - available at  - http://www.cse.wustl.edu/~schmidt/ACE.html
+
+    c) Boost libraries
+       - provide memory management and other utility C++ objects
+       - available at - http://www.boost.org
+
+In order to compile the code examples, you should first download and install
+the software packages, listed above, on your machine. I compiled and ran the
+code examples on Suse Linux 10. However, the code should work on most common
+operating systems as I've not used any non portable system call or feature.
+
+Since these packages are under active development it is possible that the
+version that you download is different from the one I used. From my past
+experience, the APIs in the newer version are largely compatible with the older 
+versions. However, sometimes it is not possible to keep the API exactly same.
+You might have to go through the new APIs and modify the example code 
+appropriately in order to resolve issues resulting from version mismatch.
+
+You will also need to modify the accompanying SConstruct files to work with
+the directory structure and the install/include directories on your machine. If
+you want you can also use some other build tool like "make".
+
+I hope you'd enjoy reading the book.
+
+Good luck!!
